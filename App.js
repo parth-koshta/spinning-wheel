@@ -11,16 +11,14 @@ import {
 import Svg, {G, Text, TSpan, Path} from 'react-native-svg';
 import * as d3Shape from 'd3-shape';
 import color from 'randomcolor';
-import {snap} from '@popmotion/popcorn';
-
 const {width} = Dimensions.get('screen');
-const numberOfSegments = 10;
+const numberOfSegments = 12;
 const wheelSize = width * 0.9;
 const fontSize = 26;
 const oneTurn = 360;
 const angleBySegment = oneTurn / numberOfSegments;
 const angleOffset = angleBySegment / 2;
-const customWinnerIndex = 6;
+const customWinnerIndex = 10;
 
 const colors = color({
   luminosity: 'dark',
