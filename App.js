@@ -14,13 +14,13 @@ import color from 'randomcolor';
 import {snap} from '@popmotion/popcorn';
 
 const {width} = Dimensions.get('screen');
-const numberOfSegments = 4;
+const numberOfSegments = 10;
 const wheelSize = width * 0.9;
 const fontSize = 26;
 const oneTurn = 360;
 const angleBySegment = oneTurn / numberOfSegments;
 const angleOffset = angleBySegment / 2;
-const customWinnerIndex = 2;
+const customWinnerIndex = 7;
 
 const colors = color({
   luminosity: 'dark',
@@ -75,7 +75,7 @@ class App extends React.Component {
       console.log(winnerIndex, 'winnerIndex')
       console.log(this.angle, 'this.angle');
       console.log(angleBySegment, 'angleBySegment')
-      let winnerAngle = ((Math.abs(Math.abs(customWinnerIndex - winnerIndex) - numberOfSegments)) * angleBySegment);
+      let winnerAngle = ((Math.abs(Math.abs(customWinnerIndex - winnerIndex) - numberOfSegments)) * angleBySegment) - (angleBySegment / 2);
       console.log(winnerAngle, 'winnerAngle')
 
 
